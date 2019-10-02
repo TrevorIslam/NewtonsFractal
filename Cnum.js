@@ -32,17 +32,21 @@ class Cnum {
   distance (other) {
     let a = other.a - this.a;
     let b = other.b - this.b;
-    let newA = sqrt(a * a);
-    let newB = sqrt(b * b);
 
-    return new Cnum(newA, newB);
+    return Math.sqrt(a * a + b * b);
   }
-}
+
+  power (num) {
+    let temp = new Cnum (1,0);
+    for (let i = 0; i < num; i++) {
+      temp = temp.multiply(this);
+    }
+    return temp;
+  }
 
   complexConjugate () {
     newB = this.b * -1;
 
     return new Cnum (this.a, newB);
   }
-
 }
