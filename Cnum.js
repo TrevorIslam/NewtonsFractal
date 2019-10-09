@@ -45,7 +45,7 @@ class Cnum {
   }
 
   complexConjugate () {
-    newB = this.b * -1;
+    var newB = this.b * -1;
 
     return new Cnum (this.a, newB);
   }
