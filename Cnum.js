@@ -26,7 +26,12 @@ class Cnum {
   }
 
   divide (other) {
-    return this.multiply(other.complexConjugate());
+    let numerator = this.multiply(other.complexConjugate());
+    let denominator = other.multiply(other.complexConjugate());
+
+    let newA = numerator.a / denominator.a;
+    let newB = numerator.b / denominator.a;
+    return new Cnum(newA, newB);
   }
 
   distance (other) {
