@@ -8,7 +8,7 @@ function setup () {
   var height = 500;
   noStroke();
   createCanvas(500, 500);
-  translate(width / 2, height /2)
+  translate(width / 2, height / 2);
   background(200);
   func = new Polynomial ([1, 0, 0, -1]);
   funcPrime = func.derivative();
